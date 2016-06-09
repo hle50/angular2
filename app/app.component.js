@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './nav.component', './users.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './nav.component', './users.component', './posts.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', './nav.component', './users
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, nav_component_1, users_component_1;
+    var core_1, router_1, nav_component_1, users_component_1, posts_component_1;
     var AppComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/core', 'angular2/router', './nav.component', './users
             },
             function (users_component_1_1) {
                 users_component_1 = users_component_1_1;
+            },
+            function (posts_component_1_1) {
+                posts_component_1 = posts_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -33,13 +36,13 @@ System.register(['angular2/core', 'angular2/router', './nav.component', './users
                 AppComponent = __decorate([
                     router_1.RouteConfig([
                         { path: '/users', name: 'Users', component: users_component_1.UsersComponent, useAsDefault: true },
-                        //{ path: '/archive/:year/:month', name: 'Archive', component: ArchiveComponent },
+                        { path: '/posts', name: 'Posts', component: posts_component_1.PostsComponent },
                         { path: '/*other', name: 'Home', redirectTo: ['Users'] },
                     ]),
                     core_1.Component({
                         selector: 'my-app',
                         templateUrl: '/app/app.component.html',
-                        directives: [router_1.ROUTER_DIRECTIVES, nav_component_1.NavComponent],
+                        directives: [router_1.ROUTER_DIRECTIVES, nav_component_1.NavComponent, posts_component_1.PostsComponent],
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
