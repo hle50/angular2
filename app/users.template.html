@@ -1,0 +1,26 @@
+<h1>Users</h1>
+<i *ngIf="!data.length" class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+<a [routerLink]="['NewUser']" class="btn btn-primary">New Users</a>
+<table *ngIf="data.length" class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Edit</td>
+            <td>Remove</td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="#item of data">
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>
+                <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+            </td>
+             <td>
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

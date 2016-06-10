@@ -1,4 +1,4 @@
-System.register(['angular2/core', './users.service', 'angular2/http', 'angular2/router'], function(exports_1, context_1) {
+System.register(['angular2/core', './users.service', 'angular2/http'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(['angular2/core', './users.service', 'angular2/http', 'angular2/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, users_service_1, http_1, router_1;
-    var UsersComponent;
+    var core_1, users_service_1, http_1;
+    var AddUserComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -22,32 +22,26 @@ System.register(['angular2/core', './users.service', 'angular2/http', 'angular2/
             },
             function (http_1_1) {
                 http_1 = http_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
             }],
         execute: function() {
-            UsersComponent = (function () {
-                function UsersComponent(usersService) {
+            AddUserComponent = (function () {
+                function AddUserComponent(usersService) {
                     this.usersService = usersService;
-                    this.data = [];
                 }
-                UsersComponent.prototype.ngOnInit = function () {
-                    var _this = this;
-                    this.usersService.getUsers().subscribe(function (users) { return _this.data = users; });
+                AddUserComponent.prototype.onSubmit = function (f) {
+                    console.log(f);
                 };
-                UsersComponent = __decorate([
+                AddUserComponent = __decorate([
                     core_1.Component({
-                        templateUrl: './app/users.template.html',
+                        templateUrl: './app/addUsers.template.html',
                         providers: [http_1.HTTP_PROVIDERS, users_service_1.UsersService],
-                        directives: [router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [users_service_1.UsersService])
-                ], UsersComponent);
-                return UsersComponent;
+                ], AddUserComponent);
+                return AddUserComponent;
             }());
-            exports_1("UsersComponent", UsersComponent);
+            exports_1("AddUserComponent", AddUserComponent);
         }
     }
 });
-//# sourceMappingURL=users.component.js.map
+//# sourceMappingURL=addUser.component.js.map
