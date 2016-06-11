@@ -46,6 +46,7 @@ System.register(['angular2/core', 'angular2/router', './nav.component', './users
                         { path: '/users/new', name: 'NewUser', component: addUser_component_1.AddUserComponent },
                         { path: '/posts', name: 'Posts', component: posts_component_1.PostsComponent },
                         { path: '/*other', name: 'Home', redirectTo: ['Users'] },
+                        { path: 'users/:id', name: 'EditUser', component: addUser_component_1.AddUserComponent }
                     ]),
                     core_1.Component({
                         selector: 'my-app',

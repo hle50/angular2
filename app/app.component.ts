@@ -14,6 +14,7 @@ import {AddUserComponent} from './addUser.component';
     { path: '/users/new', name: 'NewUser', component: AddUserComponent},
     { path: '/posts', name: 'Posts', component: PostsComponent },
     { path: '/*other', name: 'Home', redirectTo: ['Users'] },
+    {path: 'users/:id', name:'EditUser', component:AddUserComponent}
 
 ])
 

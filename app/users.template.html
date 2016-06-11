@@ -16,7 +16,7 @@
             <td>{{item.name}}</td>
             <td>{{item.email}}</td>
             <td>
-                <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+                <i [routerLink]="['EditUser',{id:item.id}]" class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
             </td>
              <td>
                 <i class="fa fa-times fa-2x" aria-hidden="true"></i>

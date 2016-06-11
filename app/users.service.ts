@@ -12,4 +12,7 @@ export class UsersService{
     getUsers(){
         return this._http.get(this.url).map(res => res.json());
     }
+    getUserById(id){
+        return this._http.get(this.url+'/'+id).map(res => res.json());
+    }
 }
